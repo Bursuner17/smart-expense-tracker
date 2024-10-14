@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Expense Tracker</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-FoBfSH7v1InwihcdwZST4YSHO1yDmtAxOiUtEfI9J7MyhfphcSa5U6J5+zQL7D4b" crossorigin="anonymous" /> <!-- Font Awesome -->
+    <script src="assets/js/script.js" type="module"></script> <!-- Ensure type="module" for script -->
 </head>
+
 <body>
-    <h1>Welcome to Smart Expense Tracker</h1>
-    <p>Track your expenses and manage your finances efficiently!</p>
-    <script src="assets/js/script.js"></script>
+    <header>
+        <h1>Smart Expense Tracker</h1> <!-- Title of the application -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/expense-tracker.html">Expense Tracker</a></li>
+                <li><a href="pages/login.html">Login</a></li>
+                <li><a href="pages/register.html">Register</a></li>
+                <li><a href="pages/user-profile.html">User Profile</a></li>
+                <li><a href="pages/analytics.html">Analytics</a></li>
+                <li><a href="pages/settings.html">Settings</a></li>
+                <li><a href="pages/help.html">Help/FAQ</a></li>
+            </ul>
+        </nav>               
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to Your Personal Finance Assistant!</h2> <!-- Welcome message -->
+            <p>Track your expenses easily and efficiently.</p> <!-- Brief description -->
+            <button id="explore-button" onclick="location.href='pages/register.html';">Get Started</button> <!-- Explore button -->
+        </section>
+
+        <section id="features">
+            <h2>Features</h2> <!-- Features section header -->
+            <div class="features-container">
+                <div class="feature" onclick="location.href='pages/expense-tracker.html';">
+                    <div class="feature-header">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Expense Tracking</h3>
+                    </div>
+                    <div class="feature-content">
+                        <p>Track all your expenses with ease. Categorize and visualize your spending.</p>
+                    </div>
+                </div>
+                <div class="feature" onclick="location.href='pages/budget-planning.html';">
+                    <div class="feature-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Budget Planning</h3>
+                    </div>
+                    <div class="feature-content">
+                        <p>Plan your monthly budget and stick to it with personalized recommendations.</p>
+                    </div>
+                </div>
+                <div class="feature" onclick="location.href='pages/financial-tips.html';">
+                    <div class="feature-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Financial Tips</h3>
+                    </div>
+                    <div class="feature-content">
+                        <p>Get expert tips on saving and investing to improve your financial health.</p>
+                    </div>
+                </div>
+                <div class="feature" onclick="location.href='pages/analytics.html';">
+                    <div class="feature-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Analytics</h3>
+                    </div>
+                    <div class="feature-content">
+                        <p>Analyze your spending patterns and gain insights with interactive graphs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>User Testimonials</h2> <!-- Testimonials section header -->
+            <blockquote>
+                <p>"This app has changed the way I manage my finances!"</p> <!-- Testimonial 1 -->
+                <cite>- User A</cite> <!-- User name -->
+            </blockquote>
+            <blockquote>
+                <p>"I saved so much money after using this app!"</p> <!-- Testimonial 2 -->
+                <cite>- User B</cite> <!-- User name -->
+            </blockquote>
+        </section>
+
+        <section id="add-expense">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <input type="number" id="amount" placeholder="Amount" required /> <!-- Input for expense amount -->
+                <input type="text" id="description" placeholder="Description" required /> <!-- Input for expense description -->
+                <button type="submit">Add Expense</button> <!-- Button to submit the form -->
+            </form>
+            <ul id="expense-list"></ul> <!-- List to display expenses -->
+        </section>
+
+        <section id="call-to-action">
+            <h2>Start Tracking Your Expenses Today!</h2> <!-- Call to action -->
+            <button onclick="location.href='pages/register.html';">Sign Up</button> <!-- Button to sign up -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow us on social media!</p> <!-- Social media call to action -->
+        <p>Contact: <a href="mailto:info@expense-tracker.com">info@expense-tracker.com</a></p> <!-- Contact email -->
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> <!-- Footer links -->
+        </p>
+    </footer>
+
+    <script src="assets/js/script.js" type="module"></script> <!-- Ensure type="module" for script -->
+    <script src="../assets/js/auth.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>

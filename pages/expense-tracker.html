@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Smart Expense Tracker</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracking</h1>
+        <nav>
+            <a href="../index.html">Home</a> | 
+            <a href="expense-tracker.html">Expense Tracker</a> | 
+            <a href="analytics.html">Analytics</a> | 
+            <button id="logout-button">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Add Expense Form -->
+        <section id="add-expense">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="date" id="date" required>
+                <select id="category">
+                    <option value="food">Food</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="is-recurring"> Recurring Expense
+                </label>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <!-- Expense List with Filter and Sort -->
+        <section id="expense-list-section">
+            <h2>Expense List</h2>
+            <div id="filter-sort-section">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="food">Food</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+                <select id="sort-expenses">
+                    <option value="date">Sort by Date</option>
+                    <option value="amount">Sort by Amount</option>
+                </select>
+            </div>
+            <ul id="expense-list"></ul>
+        </section>
+
+        <!-- Visual Analytics Section -->
+        <section id="visual-analytics">
+            <h2>Visual Analytics</h2>
+            <canvas id="expense-chart"></canvas>
+        </section>
+        <!-- Expense List and Analytics Section -->
+<section id="expense-analysis">
+    <!-- Expense List -->
+    <div id="expense-list-section">
+        <h3>My Expenses</h3>
+        <ul id="expense-list">
+            <!-- Dynamic list items will be added here through JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Graphical Analytics Section -->
+    <div id="visual-analytics">
+        <h3>Expense Analysis</h3>
+        <canvas id="expense-chart"></canvas>
+    </div>
+</section>
+</main>
+
+    <!-- JavaScript for functionality -->
+    <script src="../assets/js/expense-tracking.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

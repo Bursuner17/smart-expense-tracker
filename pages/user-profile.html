@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Expense Tracker - Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="expense-tracker.html">Expense Tracker</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><button id="logout-button">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-main">
+        <!-- Profile Picture and Name -->
+        <section class="profile-header">
+            <div class="profile-pic-container">
+                <img src="../assets/images/bruno.jpg" alt="Profile Picture" class="profile-pic">
+                <button id="edit-pic-btn" class="edit-pic-btn">Edit</button>
+            </div>
+            <h2 class="user-name">John Doe</h2>
+        </section>
+
+        <!-- User Details -->
+        <section class="user-details">
+            <h3>User Details</h3>
+            <p><strong>Username:</strong> <span id="username-display">johndoe</span></p>
+            <p><strong>Email:</strong> <span id="email-display">johndoe@example.com</span></p>
+            <p><strong>Member Since:</strong> January 2023</p>
+            <button id="edit-details-btn" class="edit-details-btn">Edit Details</button>
+        </section>
+
+        <!-- Financial Overview -->
+        <section class="financial-overview">
+            <h3>Financial Overview</h3>
+            <div class="overview-item">
+                <p><strong>Total Monthly Expenses:</strong> $1200</p>
+            </div>
+            <div class="overview-item">
+                <p><strong>Monthly Budget:</strong> $2000</p>
+            </div>
+            <div class="overview-item">
+                <p><strong>Savings:</strong> $800</p>
+            </div>
+        </section>
+
+        <!-- Activity Feed -->
+        <section class="activity-feed">
+            <h3>Recent Activities</h3>
+            <ul>
+                <li>Added an expense of $50 to 'Groceries'</li>
+                <li>Updated monthly budget to $2000</li>
+                <li>Saved $100 by reducing entertainment expenses</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Edit Profile Picture Modal -->
+    <div id="edit-pic-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-pic-modal">&times;</span>
+            <h2>Edit Profile Picture</h2>
+            <input type="file" id="profile-pic-input" accept="image/*">
+            <button id="save-pic-btn">Save Picture</button>
+        </div>
+    </div>
+
+    <!-- Edit User Details Modal -->
+    <div id="edit-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-details-modal">&times;</span>
+            <h2>Edit User Details</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="johndoe">
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="johndoe@example.com">
+            <button id="save-details-btn">Save Details</button>
+        </div>
+    </div>
+    
+    <script src="../assets/js/auth.js"></script>
+</body>
+</html>
