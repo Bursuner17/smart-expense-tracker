@@ -1,1 +1,16 @@
-{}
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.0"
+  },
+  "name": "smart-expense-tracker",
+  "version": "1.0.0",
+  "description": "This project is a web application for tracking expenses, managing budgets, and receiving financial tips based on user spending habits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

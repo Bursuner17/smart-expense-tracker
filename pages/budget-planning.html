@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Planning</title>
-    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
     <header>
         <h1>Budget Planning</h1>
@@ -15,9 +13,6 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="expense-tracker.html">Expense Tracker</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="user-profile.html">User Profile</a></li>
                 <li><a href="analytics.html">Analytics</a></li>
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="help.html">Help/FAQ</a></li>
@@ -28,19 +23,24 @@
     <main>
         <section>
             <h2>Your Budget Planning Tool</h2>
-            <p>Here you can plan your budget effectively. Set goals and monitor your spending.</p>
-            <!-- Add your content and functionalities for Budget Planning here -->
+            <p>Set goals and monitor your spending.</p>
+            <form id="budget-form">
+                <label for="budget-amount">Set Monthly Budget:</label>
+                <input type="number" id="budget-amount" placeholder="Enter budget amount" required>
+                <button type="submit">Save Budget</button>
+            </form>
+            <h3>Budget Overview</h3>
+            <p>Monthly Budget: <span id="monthly-budget"></span></p>
+            <p>Expenses So Far: <span id="current-expenses"></span></p>
+            <progress id="budget-progress" value="0" max="100"></progress>
         </section>
     </main>
 
     <footer>
-        <p>Follow us on social media!</p>
         <p>Contact: <a href="mailto:info@expense-tracker.com">info@expense-tracker.com</a></p>
-        <p>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-        </p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/budget.js"></script>
 </body>
-
 </html>
-

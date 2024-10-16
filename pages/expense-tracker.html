@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker - Smart Expense Tracker</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Expense Tracking</h1>
         <nav>
-            <a href="../index.html">Home</a> | 
-            <a href="expense-tracker.html">Expense Tracker</a> | 
-            <a href="analytics.html">Analytics</a> | 
+            <a href="../index.html">Home</a> |
+            <a href="expense-tracker.html">Expense Tracker</a> |
+            <a href="analytics.html">Analytics</a> |
             <button id="logout-button">Logout</button>
         </nav>
     </header>
@@ -62,27 +63,10 @@
             <h2>Visual Analytics</h2>
             <canvas id="expense-chart"></canvas>
         </section>
-        <!-- Expense List and Analytics Section -->
-<section id="expense-analysis">
-    <!-- Expense List -->
-    <div id="expense-list-section">
-        <h3>My Expenses</h3>
-        <ul id="expense-list">
-            <!-- Dynamic list items will be added here through JavaScript -->
-        </ul>
-    </div>
-
-    <!-- Graphical Analytics Section -->
-    <div id="visual-analytics">
-        <h3>Expense Analysis</h3>
-        <canvas id="expense-chart"></canvas>
-    </div>
-</section>
-</main>
+    </main>
 
     <!-- JavaScript for functionality -->
     <script src="../assets/js/expense-tracking.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </body>
 </html>
