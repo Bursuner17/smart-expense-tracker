@@ -1,21 +1,14 @@
-// db.js
 const { Pool } = require('pg');
-require('dotenv').config();
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+    user: 'default', // replace with your PostgreSQL username
+    host: 'ep-proud-sky-a4vg9rw8-pooler.us-east-1.aws.neon.tech',
+    database: 'expense-tracker', // replace with your database name
+    password: 'oH9spqIN5YCE', // replace with your PostgreSQL password
+    port: 5432, // default PostgreSQL port
+    ssl: {
+        rejectUnauthorized: false, // this allows self-signed certificates
+    },
 });
 
 module.exports = pool;
-// Test connection
-pool.connect((err) => {
-    if (err) {
-      console.error('Database connection error:', err.stack);
-    } else {
-      console.log('Connected to the database.');
-    }
-  });
-  
